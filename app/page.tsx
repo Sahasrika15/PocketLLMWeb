@@ -278,7 +278,7 @@ export default function Home() {
 
                       <div className="flex justify-end">
                         <div className="bg-gradient-to-r from-purple-600 to-purple-700 rounded-2xl rounded-tr-md p-3 max-w-xs">
-                          <p className="text-white text-sm">Send a message to John saying I'm running late</p>
+                          <p className="text-white text-sm">Schedule an event in calendar at 9am tomorrow with my boss</p>
                         </div>
                       </div>
 
@@ -287,7 +287,7 @@ export default function Home() {
                           <Bot className="w-4 h-4 text-white" />
                         </div>
                         <div className="bg-gray-100 rounded-2xl rounded-tl-md p-3 max-w-xs">
-                          <p className="text-gray-700 text-sm">Message sent to John: "I'm running late for our meeting" ✓</p>
+                          <p className="text-gray-700 text-sm">Scheduled Meet with Boss tomorrow at 9:00 am</p>
                         </div>
                       </div>
 
@@ -313,19 +313,19 @@ export default function Home() {
                   <div className="font-mono text-sm space-y-3">
                     <div className="text-green-600 flex items-center">
                       <span>$</span>
-                      <span className="ml-2 typing-animation">What's the weather like?</span>
+                      <span className="ml-2 typing-animation">What is full form of API</span>
                     </div>
                     <div className="text-gray-700 flex items-start gap-2">
                       <Brain className="w-4 h-4 text-purple-600 mt-0.5 animate-pulse" />
-                      <span>Checking local weather data... It's 72°F and sunny today.</span>
+                      <span>The full form of API is Application Programming Interface</span>
                     </div>
                     <div className="text-green-600 flex items-center">
                       <span>$</span>
-                      <span className="ml-2">Remind me about the meeting at 3pm</span>
+                      <span className="ml-2">Call Pooja</span>
                     </div>
                     <div className="text-gray-700 flex items-start gap-2">
                       <Brain className="w-4 h-4 text-purple-600 mt-0.5 animate-pulse" />
-                      <span>Reminder set for 3:00 PM today ✓</span>
+                      <span>Calling Pooja...</span>
                     </div>
                     <div className="flex items-center">
                       <span className="text-green-600">$</span>
@@ -387,7 +387,7 @@ export default function Home() {
               {
                 icon: Phone,
                 title: "System Integration",
-                description: "Seamlessly integrates with your Android system to perform real actions like calling and scheduling.",
+                description: "Seamlessly integrates with your Android system to perform real actions like calling, send sms and scheduling.",
                 color: "from-red-500 to-pink-500",
                 delay: "delay-400"
               },
@@ -409,7 +409,6 @@ export default function Home() {
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-r ${feature.color} shadow-lg group-hover:shadow-xl transition-all duration-300`}>
                       <feature.icon className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" />
                     </div>
-                    <div className={`absolute inset-0 bg-gradient-to-r ${feature.color} rounded-xl opacity-20 blur group-hover:opacity-30 group-hover:blur-md transition-all duration-300`}></div>
                   </div>
                   <CardTitle className="text-gray-800 group-hover:text-gray-900 transition-colors duration-300">{feature.title}</CardTitle>
                 </CardHeader>
@@ -425,7 +424,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative" style={{ background: 'var(--background-color, #ffffff)' }}>
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-left">
@@ -446,7 +445,6 @@ export default function Home() {
                 {[
                   "Zero data collection or tracking",
                   "Works completely offline",
-                  "Lightning-fast responses",
                   "Advanced natural language understanding",
                   "Seamless Android integration",
                 ].map((item, index) => (
@@ -458,11 +456,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 group">
-                Learn More About Our Technology
-                <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
             </div>
 
             <div className="grid grid-cols-2 gap-6 animate-fade-in-right">
@@ -489,7 +482,7 @@ export default function Home() {
       </section>
 
       {/* Download Section */}
-      <section id="download" className="py-20 px-4 sm:px-6 lg:px-8 relative" style={{ background: 'var(--background-color, #ffffff)' }}>
+      <section id="download" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
@@ -532,7 +525,7 @@ export default function Home() {
                   }}
                 >
                   <Download className="mr-2 h-5 w-5" />
-                  Download APK (Coming Soon)
+                  Download APK
                 </Button>
                 <Button size="lg" variant="outline" className="bg-white text-black border-black hover:bg-black hover:text-white hover:border-white transition-all duration-300 hover:scale-105">
                   <Github className="mr-2 h-5 w-5" />
@@ -547,9 +540,9 @@ export default function Home() {
                   <div className="text-gray-500 text-sm">No data collection</div>
                 </div>
                 <div className="text-center">
-                  <Zap className="h-8 w-8 text-purple-600 mx-auto mb-2 animate-pulse" />
-                  <div className="text-gray-800 font-semibold">Lightning Fast</div>
-                  <div className="text-gray-500 text-sm">Optimized performance</div>
+                  <WifiOff className="h-8 w-8 text-purple-600 mx-auto mb-2 animate-pulse" />
+                  <div className="text-gray-800 font-semibold">Completely Offline</div>
+                  <div className="text-gray-500 text-sm">Uses local GGUF models</div>
                 </div>
                 <div className="text-center">
                   <Users className="h-8 w-8 text-purple-600 mx-auto mb-2 animate-pulse" />
@@ -567,117 +560,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center mb-4">
-                <img
-                  src="/path-to-pocket-llm-logo.png"
-                  alt="Pocket LLM Logo"
-                  className="h-10 w-auto"
-                />
-              </div>
-              <p className="text-gray-300 mb-6 max-w-md">
-                The future of AI assistance is here - completely private, fully offline, and incredibly intelligent.
-                Your personal AI that respects your privacy.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                  <Github className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                  <Twitter className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                  <Mail className="h-6 w-6" />
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-gray-200">Features</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    On-Device Processing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    Offline Functionality
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    Intent Recognition
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    System Integration
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    Privacy First
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-gray-200">Support</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    Contact Support
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-400 transition-colors duration-300">
-                    Terms of Service
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-700">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">
-                © 2025 Pocket LLM. Built with privacy in mind. All rights reserved.
-              </p>
-              <div className="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-300">
-                  Privacy
-                </a>
-                <a href="#" className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-300">
-                  Terms
-                </a>
-                <a href="#" className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-300">
-                  Cookies
-                </a>
-              </div>
-            </div>
-          </div>
+      <footer id="contact" className="bg-gray-900 text-white py-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex justify-center items-center text-center">
+          <p className="text-gray-400 text-sm">
+            © 2025 Pocket LLM. Built with privacy in mind. All rights reserved.
+          </p>
         </div>
       </footer>
+
     </div>
   )
 }
