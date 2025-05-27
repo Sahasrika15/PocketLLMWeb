@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import {
   Shield,
   Smartphone,
-  Wifi,
+  WifiOff,
   Brain,
   MessageSquare,
   Phone,
@@ -24,6 +24,7 @@ import {
   Play,
   Globe,
   Lock,
+  Mic,
   Cpu,
   ArrowRight,
   Bot,
@@ -135,7 +136,7 @@ export default function Home() {
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center group cursor-pointer">
                 <img
-                  src="/images/WhatsApp%20Image%202025-05-27%20at%2010.46.05_4ca891dd.jpg"
+                  src="/images/logo.jpg"
                   alt="Pocket LLM Logo"
                   className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
                 />
@@ -238,7 +239,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto flex flex-col lg:flex-row gap-8 items-center justify-center">
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div 
+                <div
                   className="relative bg-slate-900 rounded-3xl p-6 shadow-2xl border border-slate-800 hover:border-blue-800/50 transition-all duration-500 transform hover:scale-105"
                   style={{ transform: `translateY(${scrollY * 0.1}px) rotateX(${Math.min(scrollY * 0.05, 10)}deg)` }}
                 >
@@ -247,13 +248,13 @@ export default function Home() {
                       <span>9:41 AM</span>
                       <div className="flex gap-1 items-center">
                         <div className="w-4 h-2 bg-green-500 rounded-sm"></div>
-                        <Wifi className="w-3 h-3" />
+                        <WifiOff className="w-3 h-3" />
                         <div className="w-6 h-3 border border-slate-400 rounded-sm">
                           <div className="w-4 h-full bg-green-500 rounded-sm"></div>
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-3">
                       <div className="flex items-start gap-2">
                         <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
@@ -263,13 +264,13 @@ export default function Home() {
                           <p className="text-slate-200 text-sm">Hi! I'm your private AI assistant. How can I help you today?</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex justify-end">
                         <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl rounded-tr-md p-3 max-w-xs">
                           <p className="text-white text-sm">Send a message to John saying I'm running late</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-start gap-2">
                         <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
                           <Bot className="w-4 h-4 text-white" />
@@ -278,7 +279,7 @@ export default function Home() {
                           <p className="text-slate-200 text-sm">Message sent to John: "I'm running late for our meeting" ✓</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center gap-2 px-2">
                         <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
                         <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '100ms' }}></div>
@@ -352,7 +353,7 @@ export default function Home() {
                 delay: "delay-0"
               },
               {
-                icon: Wifi,
+                icon: WifiOff,
                 title: "Works Offline",
                 description: "Full functionality without internet connection. Perfect for areas with poor connectivity or privacy concerns.",
                 color: "from-blue-500 to-cyan-500",
@@ -365,17 +366,19 @@ export default function Home() {
                 color: "from-purple-500 to-violet-500",
                 delay: "delay-200"
               },
+
               {
-                icon: MessageSquare,
-                title: "Smart Actions",
-                description: "Intent-based system automatically detects when you want to send SMS, make calls, or perform other actions.",
-                color: "from-orange-500 to-red-500",
+                icon: Mic,
+                title: "Voice Commands",
+                description: " Have a conversation with the AI — use your voice to make calls, schedule calendar events, or perform tasks effortlessly in real time.",
+                color: "from-purple-600 to-indigo-600",
                 delay: "delay-300"
               },
+
               {
                 icon: Phone,
                 title: "System Integration",
-                description: "Seamlessly integrates with your Android system to perform real actions like calling and messaging.",
+                description: "Seamlessly integrates with your Android system to perform real actions like calling and scheduling.",
                 color: "from-red-500 to-pink-500",
                 delay: "delay-400"
               },
@@ -475,27 +478,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py- Yale-blue16 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: "100%", label: "Privacy Guaranteed" },
-              { number: "0ms", label: "Cloud Latency" },
-              { number: "24/7", label: "Offline Availability" },
-              { number: "50+", label: "Smart Actions" },
-            ].map((stat, index) => (
-              <div key={index} className="group hover:scale-105 transition-all duration-300">
-                <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {stat.number}
-                </div>
-                <div className="text-slate-400 group-hover:text-slate-300 transition-colors duration-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Download Section */}
       <section id="download" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900 to-blue-950 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -503,7 +485,7 @@ export default function Home() {
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto text-center relative">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent">
@@ -542,10 +524,11 @@ export default function Home() {
                   <Download className="mr-2 h-5 w-5" />
                   Download APK (Coming Soon)
                 </Button>
-                <Button size="lg" variant="outline" className="border-blue-800/50 text-slate-300 hover:bg-blue-950/50 hover:border-blue-700 transition-all duration-300 hover:scale-105">
+                <Button size="lg" variant="outline" className="bg-white text-black border-black hover:bg-black hover:text-white hover:border-white transition-all duration-300 hover:scale-105">
                   <Github className="mr-2 h-5 w-5" />
                   View on GitHub
                 </Button>
+
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
@@ -569,7 +552,7 @@ export default function Home() {
           </Card>
 
           <div className="text-sm text-slate-400">
-            <p>System Requirements: Android 7.0+ • ARM64 processor recommended • 2GB RAM minimum</p>
+            <p>System Requirements: Android 24.0+ • 6GB RAM minimum</p>
           </div>
         </div>
       </section>
