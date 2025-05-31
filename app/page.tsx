@@ -3,6 +3,13 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { 
+  Wheat,          // for Agriculture
+  Tractor,        // for Agriculture (optional)
+  Stethoscope,    // for Medical
+  Heart,          // for Medical (heartbeat alternative)
+  Code            // for Coding
+} from "lucide-react";
 import {
   Shield,
   Smartphone,
@@ -28,7 +35,10 @@ import {
   Cpu,
   ArrowRight,
   Bot,
-  Sparkles
+  Sparkles,
+  AlarmClock,
+  Calendar,
+  Database,
 } from "lucide-react"
 import { useState, useEffect } from "react"
 
@@ -156,7 +166,7 @@ export default function Home() {
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                {["Features", "About", "Download", "Contact"].map((item) => (
+                {["Features", "RAG", "About", "Download", "Contact"].map((item) => (
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
@@ -192,7 +202,7 @@ export default function Home() {
 
         <div className={`md:hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-xl border-b" style={{ borderColor: 'var(--border-color, #e5e7eb)' }}>
-            {["Features", "About", "Download", "Contact"].map((item, index) => (
+            {["Features", "RAG", "About", "Download", "Contact"].map((item, index) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -287,6 +297,7 @@ export default function Home() {
                           <Bot className="w-4 h-4 text-white" />
                         </div>
                         <div className="bg-gray-100 rounded-2xl rounded-tl-md p-3 max-w-xs">
+                          ausp
                           <p className="text-gray-700 text-sm">Scheduled Meet with Boss tomorrow at 9:00 am</p>
                         </div>
                       </div>
@@ -357,44 +368,44 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Shield,
-                title: "Complete Privacy",
-                description: "Your conversations never leave your device. No cloud processing, no data collection, no tracking.",
-                color: "from-green-500 to-emerald-500",
-                delay: "delay-0"
-              },
-              {
-                icon: WifiOff,
-                title: "Works Offline",
-                description: "Full functionality without internet connection. Perfect for areas with poor connectivity or privacy concerns.",
-                color: "from-purple-500 to-purple-600",
-                delay: "delay-100"
-              },
-              {
                 icon: Brain,
                 title: "Advanced LLM",
                 description: "Powered by quantized large language models via llama.cpp for intelligent, context-aware conversations.",
                 color: "from-purple-600 to-purple-700",
-                delay: "delay-200"
+                delay: "delay-0"
               },
               {
                 icon: Mic,
                 title: "Voice Commands",
                 description: "Have a conversation with the AI — use your voice to make calls, schedule calendar events, or perform tasks effortlessly in real time.",
                 color: "from-purple-600 to-indigo-600",
-                delay: "delay-300"
+                delay: "delay-100"
               },
               {
                 icon: Phone,
                 title: "System Integration",
-                description: "Seamlessly integrates with your Android system to perform real actions like calling, send sms and scheduling.",
+                description: "Seamlessly integrates with your Android system to perform real actions like calling, sending SMS, and scheduling.",
                 color: "from-red-500 to-pink-500",
+                delay: "delay-200"
+              },
+              {
+                icon: AlarmClock,
+                title: "Smart Alarms",
+                description: "Set and manage alarms effortlessly using natural language commands, integrated with your device's clock.",
+                color: "from-blue-500 to-blue-600",
+                delay: "delay-300"
+              },
+              {
+                icon: MessageSquare,
+                title: "SMS Management",
+                description: "Send, receive, and manage SMS messages directly through the AI with simple voice or text instructions.",
+                color: "from-green-500 to-emerald-500",
                 delay: "delay-400"
               },
               {
-                icon: Smartphone,
-                title: "Native Android",
-                description: "Built specifically for Android with Kotlin, ensuring optimal performance and battery efficiency.",
+                icon: Calendar,
+                title: "Calendar Scheduling",
+                description: "Easily schedule, edit, or view calendar events using intuitive AI-powered commands.",
                 color: "from-indigo-500 to-purple-500",
                 delay: "delay-500"
               },
@@ -415,6 +426,68 @@ export default function Home() {
                 <CardContent>
                   <CardDescription className="text-gray-500 group-hover:text-gray-600 transition-colors duration-300">
                     {feature.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RAG Section */}
+      <section id="rag" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-gray-700 to-gray-500 bg-clip-text text-transparent">
+                Retrieval-Augmented Generation
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up">
+              Our App leverages Retrieval-Augmented Generation (RAG) to enhance responses with domain-specific knowledge. By combining on-device large language models with curated datasets, we deliver accurate and contextually relevant answers tailored to your needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Wheat,
+                title: "Agriculture Dataset",
+                description: "Access a comprehensive dataset covering crop management, soil analysis, and sustainable farming practices. Perfect for farmers and researchers seeking data-driven agricultural insights.",
+                color: "from-green-500 to-emerald-500",
+                delay: "delay-0"
+              },
+              {
+                icon: Stethoscope,
+                title: "Medical Dataset",
+                description: "Utilize a robust medical dataset with information on diseases, treatments, and medical terminology, designed to assist healthcare professionals and students with reliable information.",
+                color: "from-blue-500 to-blue-600",
+                delay: "delay-100"
+              },
+              {
+                icon: Code,
+                title: "Computer Coding Dataset",
+                description: "Explore a rich dataset of programming concepts, code snippets, and best practices across multiple languages, ideal for developers and students enhancing their coding skills.",
+                color: "from-purple-600 to-purple-700",
+                delay: "delay-200"
+              },
+            ].map((dataset, index) => (
+              <Card
+                key={index}
+                className={`bg-gray-50 border hover:border-purple-600/50 backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 group ${dataset.delay} animate-fade-in-up`}
+                style={{ borderColor: 'var(--border-color, #e5e7eb)' }}
+              >
+                <CardHeader>
+                  <div className="relative mb-4">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-r ${dataset.color} shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                      <dataset.icon className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-gray-800 group-hover:text-gray-900 transition-colors duration-300">{dataset.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-500 group-hover:text-gray-600 transition-colors duration-300">
+                    {dataset.description}
                   </CardDescription>
                 </CardContent>
               </Card>
