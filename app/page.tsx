@@ -157,16 +157,16 @@ export default function Home() {
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center group cursor-pointer">
                 <img
-                  src="/images/logo.jpg"
+                  src="/images/logo.png"
                   alt="Pocket LLM Logo"
-                  className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+                  className="h-10 w-auto transition-transform duration-300"
                 />
               </div>
             </div>
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                {["Features", "RAG", "About", "Download", "Contact"].map((item) => (
+                {["Features", "RAG", "About", "Download"].map((item) => (
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
@@ -383,8 +383,8 @@ export default function Home() {
               },
               {
                 icon: Phone,
-                title: "System Integration",
-                description: "Seamlessly integrates with your Android system to perform real actions like calling, sending SMS, and scheduling.",
+                title: "Call Integration",
+                description: "Seamlessly integrates with your Android system to make real phone calls instantly.",
                 color: "from-red-500 to-pink-500",
                 delay: "delay-200"
               },
@@ -575,7 +575,7 @@ export default function Home() {
             Download our Android app and start having intelligent conversations without compromising your privacy.
           </p>
 
-          <Card className="bg-gray-50 border hover:border-purple-600/50 backdrop-blur-sm mb-12 max-w-2xl mx-auto transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10" style={{ borderColor: 'var(--border-color, #e5e7eb)' }}>
+          <Card className="bg-gray-50 border hover:border-purple-600/50 backdrop-blur-sm mb-12 max-w-2xl mx-auto transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10" style={{ borderColor: 'var(--border-color, #e5e7eb)' }}>
             <CardHeader>
               <CardTitle className="text-gray-800 flex items-center justify-center gap-2">
                 <div className="relative">
